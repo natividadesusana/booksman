@@ -1,10 +1,8 @@
 import { Request, Response } from "express";
 import httpStatus from "http-status";
-
 import { isIdValid } from "../utils/id-validator";
 import { CreateBook } from "../protocols/book";
 import { CreateReview } from "../protocols/review";
-
 import * as bookService from "./../services/book-service";
 
 export async function getBooks(req: Request, res: Response) {

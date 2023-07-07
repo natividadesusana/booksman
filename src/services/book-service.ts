@@ -22,8 +22,7 @@ export async function createBook(book: CreateBook) {
 }
 
 export async function reviewBook(review: CreateReview) {
-  await getBook(review.bookId); 
+  await getBook(review.bookId); // check if the book exists
 
   return await booksRepository.reviewBook(review);
 }
-
